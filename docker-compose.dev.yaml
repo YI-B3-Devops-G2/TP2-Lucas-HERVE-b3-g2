@@ -38,6 +38,7 @@ services:
       - REDIS_HOST=redis  # Container name
     volumes:
       - ./:/home/node/app
+      - /home/node/app/node_modules
     restart: on-failure   # Restarts container when it fails
     networks:
       - network-db

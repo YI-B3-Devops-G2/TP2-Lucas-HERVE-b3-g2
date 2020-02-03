@@ -8,6 +8,9 @@ WORKDIR /home/node/app
 RUN chown -R node:node /home/node/app
 USER node
 
+COPY package*.json /home/node/app/
+RUN npm install
+
 # Commands at runtime
 # Command "dev" does not work
 CMD [ "npm", "run", "start" ]
